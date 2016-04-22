@@ -1,0 +1,4 @@
+source ~/.autoenv/activate.sh
+setopt autopushd
+alias tmux='tmux -2'
+eval `dircolors ~/dircolors-solarized/dircolors.256dark`
