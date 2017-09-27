@@ -1,0 +1,6 @@
+#!/bin/sh
+# original file backed up at ~/.vnc/xstartup.bak
+xrdb $HOME/.Xresources
+xsetroot -solid grey
+startxfce4 &
+vncconfig -nowin
