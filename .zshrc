@@ -88,3 +88,5 @@ fi
 setopt autopushd
 alias tmux='tmux -2'
 alias ag='ag --pager "less -R"'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
