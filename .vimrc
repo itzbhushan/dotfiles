@@ -21,6 +21,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'christoomey/vim-tmux-navigator' "navigate seamlessly between vim and tmux
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 
