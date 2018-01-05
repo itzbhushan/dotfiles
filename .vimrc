@@ -50,9 +50,6 @@ set wrap
 set linebreak
 set wildmenu
 set wildmode=list:longest
-set foldenable
-set foldlevelstart=10
-set foldmethod=indent   " fold based on indent level
 
 
 " set key bindings
