@@ -79,3 +79,5 @@ set diffopt+=vertical " set vim-fugitive Gdiff to vertical
 
 " set 2 space indent for yaml filetype
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+set rtp+=/usr/local/opt/fzf
