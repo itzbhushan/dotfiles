@@ -14,10 +14,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
 Plug 'rking/ag.vim'
 Plug 'ervandew/supertab'
-Plug 'bling/vim-airline'
-Plug 'davidhalter/jedi-vim'
+Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
-Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -28,6 +26,7 @@ call plug#end()            " required
 " set display color
 set background=dark
 colorscheme gruvbox
+set termguicolors
 
 " Basic settings
 set hlsearch
@@ -50,6 +49,8 @@ set wrap
 set linebreak
 set wildmenu
 set wildmode=list:longest
+set undofile "Maintain history between vim sessions
+set undodir=~/dotfiles/undodir "Store per-file undo history in undodir
 
 
 " set key bindings
