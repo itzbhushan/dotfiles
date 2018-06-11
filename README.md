@@ -2,10 +2,15 @@
 Collection of configuration files.
 
 This repo contains configuration files for essential tools in my toolkit.
-Currently, this repo contains dotfiles for vim, pylint, tmux and zsh.
+Currently, this repo contains dotfiles for vim, pylint, tmux, direnv and zsh.
 Clone this project and add a link to the individual rc files. For example:
 
     ln -s dotfiles/.zshrc .zshrc
+
+
+For direnv, create a symlink to ~/.config/direnv/direnvrc. i.e.
+
+    ln -s dotfiles/.direnvrc ~/.config/direnv/direnvrc
 
 Xfce is a lightweight desktop environment for Linux. `Xfce-vnc` contains:
 
