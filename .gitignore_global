@@ -1,3 +1,5 @@
 # direnv files
 .envrc
 .direnv
+.DS_Store
+.ipynb_checkpoints
