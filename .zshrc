@@ -90,6 +90,11 @@ alias tmux='tmux -2'
 alias ag='ag --pager "less -R"'
 alias vim='nvim'
 
+# use vi mapping in zsh command line
+bindkey -v
+bindkey jk vi-cmd-mode # map escape to jk
+bindkey zz vi-cmd-mode # map escape to zz
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(direnv hook zsh)"
@@ -99,6 +104,6 @@ show_virtual_env() {
   fi
 }
 
-PS1='$(show_virtual_env)'$PS1
+PS1='%m$(show_virtual_env)'$PS1
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
