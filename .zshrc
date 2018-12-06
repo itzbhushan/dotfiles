@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git common-aliases pyenv)
+plugins=(git common-aliases pyenv vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,8 +90,6 @@ alias tmux='tmux -2'
 alias ag='ag --pager "less -R"'
 alias vim='nvim'
 
-# use vi mapping in zsh command line
-bindkey -v
 bindkey jk vi-cmd-mode # map escape to jk
 bindkey zz vi-cmd-mode # map escape to zz
 
