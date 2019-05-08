@@ -51,7 +51,7 @@ set linebreak
 set wildmenu
 set wildmode=list:longest
 set undofile "Maintain history between vim sessions
-set undodir=~/dotfiles/undodir "Store per-file undo history in undodir
+set undodir=~/.vim/undodir "Store per-file undo history in undodir
 
 
 " set key bindings
