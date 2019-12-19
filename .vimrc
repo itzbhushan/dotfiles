@@ -22,36 +22,32 @@ Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator' "navigate seamlessly between vim and tmux
 Plug 'ambv/black'  "format python code
 " All of your Plugins must be added before the following line
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " for autocomplete
 call plug#end()            " required
 
 " set display color
 set background=dark
 colorscheme gruvbox
-set termguicolors
+" set termguicolors
 
 " Basic settings
-set hlsearch
-set showmatch
-set incsearch
+set showmatch " cursor briefly jumps to the matching brace when you insert one
+set incsearch " moves cursor to the matched string while typing search pattern.
 nnoremap <leader><space> :nohlsearch<CR>    " turn off search highlight
 set number
 set rnu
-set encoding=utf-8
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
 set autoindent
 set cursorline
 set nocompatible
-set modelines=0
+set nomodeline
 set backspace=indent,eol,start
 set wrap
 set linebreak
 set wildmenu
 set wildmode=list:longest
 set undofile "Maintain history between vim sessions
-set undodir=~/.vim/undodir "Store per-file undo history in undodir
+set undodir=~/dotfiles/undodir "Store per-file undo history in undodir
+set updatetime=750 "vim waits for 750ms before triggering any plugin activity
 
 
 " set key bindings
@@ -65,7 +61,6 @@ nnoremap <C-H> <C-W><C-H>
 " more natural splitting
 set splitbelow
 set splitright
-let mapleader=","
 
 " disable arrow keys
 nnoremap <up> <nop>
@@ -81,5 +76,9 @@ set diffopt+=vertical " set vim-fugitive Gdiff to vertical
 
 " set 2 space indent for yaml filetype
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+let g:coc_global_extensions = [
+\ 'coc-prettier', 'coc-json', 'coc-python', 'coc-yaml'
+\]
 
 set rtp+=/usr/local/opt/fzf
