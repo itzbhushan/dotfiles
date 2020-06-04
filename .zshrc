@@ -103,5 +103,3 @@ show_virtual_env() {
 }
 
 PS1='%m$(show_virtual_env)'$PS1
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

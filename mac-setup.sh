@@ -5,16 +5,21 @@ cd $HOME
 brew install zsh
 chsh -s zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# remove default .zshrc
-rm -f $HOME/.zshrc $HOME
+# replace default .zshrc .zshenv and .zprofile with ours
+rm -f $HOME/.zshrc $HOME/.zprofile $HOME/.zshenv
 ln -s $HOME/dotfiles/.zshrc $HOME
+ln -s $HOME/dotfiles/.zprofile $HOME
+ln -s $HOME/dotfiles/.zshenv $HOME
 
 brew install tmux
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 ln -s $HOME/dotfiles/.tmux.conf $HOME
 
+# package to manage multiple java installations.
+brew install jenv
+
+# package to manage multiple python installations.
 brew install pyenv
-echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> $HOME/.zshenv
 exec "$SHELL"
 pyenv install 3.8.0
 pyenv global 3.8.0
@@ -30,6 +35,8 @@ ln -s $HOME/dotfiles/init.vim $HOME/.config/nvim/
 ln -s $HOME/dotfiles/.vimrc $HOME
 
 ln -s $HOME/dotfiles/.gitconfig $HOME
+ln -s $HOME/dotfiles/.gitignore_global $HOME
+git config --global core.excludesfile $HOME/.gitignore_global
 
 curl -fLo $HOME/dotfiles/Gruvbox-dark.terminal https://raw.githubusercontent.com/morhetz/gruvbox-contrib/master/osx-terminal/Gruvbox-dark.terminal
 # Import Gruvbox-dark.terminal as a new profile in osx terminal
